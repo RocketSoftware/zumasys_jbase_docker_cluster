@@ -1,0 +1,17 @@
+#
+# jconnect environment file
+#
+# Format ;-
+# ENV:server_name server_u_name client_u_name
+# environment parameters
+#
+# Asterisks can be used in place of a 'name'
+# on the ENV: line to save multiple entries.
+#
+# e.g.
+ENV:jRFS * *
+JEDIFILENAME_MD=/dbms/cluster/MD]D
+JEDIFILEPATH=/dbms/cluster
+JEDIFILENAME_SYSTEM=/opt/jbase/SYSTEM]D
+HOME=/dbms/cluster
+JBCEMULATE=d3

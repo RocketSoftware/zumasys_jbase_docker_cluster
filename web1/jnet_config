@@ -1,0 +1,22 @@
+#
+# jconnect config file
+#
+# accesschk - if off then disable client access check.
+# usejnetok - if on then use jnet_access file else use ruserok function
+# trace     - if on then trace jnetconnect functions as per tracemask
+# tracemask - if set then use as AND mask for jnetconnect functions
+# display   - if on then display trace and error messages to stderr
+# log       - if on then log trace and error message on logfile
+# logfile   - if set then use file as trace and error message file
+# logrequests - if yes then log connect requests in log file
+# mapclient   - if off then skip search jnet_map file
+# clienthost  - if on then use client provided hostname for access
+# encode      - if set on then connection string is encoded
+# dataencode  - if set on then all data packets are encoded
+#
+trace=off
+debug=off
+display=off
+#tracemask=0x000f
+log=off
+logfile=/tmp/jnet.log

@@ -1,0 +1,22 @@
+#
+# jRFS config file
+# trace                         - if on then trace jrfs functions as per tracemask
+# tracemask                     - if set then use as AND mask for jrfs functions.
+# display                       - if on then display trace and error messages to stderr.
+# log                           - if on then log trace and error message on logfile
+# logfile                       - if set then use file as trace and error message file
+# servermaxfiles        - initial max files reserved for each server, default 100
+# servermaxselect       - max selects each file allowed, default 5
+# sambapath                     - set to samba configuration file path
+# serverport            - set to jRFS socket port number
+# remexec                       - if off then no remote executions are allowed
+#                                       - restricted remote execution can be configured by creating
+#                                       - a jrfs_remexec file, with the following example entries.
+#                                       - SELECT *              - All users can exec SELECT command.
+#                                       - MYPROG tm jim - Only clients tm and jim can exec MYPROG.
+trace=off
+debug=off
+display=on
+#tracemask=0x000f
+log=off
+logfile=/tmp/jrfs.log
