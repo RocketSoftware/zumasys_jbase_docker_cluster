@@ -4,15 +4,40 @@ services:
         build: ./db1
         depends_on:
             - db2
+            - db3
         #command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     db2:
         build: ./db2
         #command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    db3:
+        build: ./db3
+        #command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     web1:
         build: ./web1
         ports:
-            - "80:80"
+            - "82:80"
+            - "2024:23"
         depends_on:
             - db1
+    web2:
+        build: ./web1
+        ports:
+            - "81:80"
+        depends_on:
+            - db1
+    webproxy:
+        build: ./webproxy
+        ports:
+            - "80:80"
+        depends_on:
+            - web1
+            - web2
+    telnetproxy:
+        build: ./telnetproxy
+        ports:
+            - "2023:2023"
+        depends_on:
+            - web1
+            - web2
 
 

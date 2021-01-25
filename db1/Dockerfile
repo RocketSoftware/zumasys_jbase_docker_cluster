@@ -6,6 +6,7 @@ COPY entrypoint.sh /usr/bin/
 COPY jnet_config /opt/jbase/CurrentVersion/config
 COPY jnet_env /opt/jbase/CurrentVersion/config
 COPY jrfs_config /opt/jbase/CurrentVersion/config
+COPY jbase_env.sh /opt/jbase/CurrentVersion/
 
 RUN chmod +x /usr/bin/entrypoint.sh
 ENTRYPOINT ["entrypoint.sh"]

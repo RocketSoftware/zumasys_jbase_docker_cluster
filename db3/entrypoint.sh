@@ -29,7 +29,7 @@ export JEDIFILEPATH=/dbms/cluster
 jRFS -ib
 
 echo "running tail"
-jlogdup -v -e /tmp/tjgeterrs -l /tmp/tjgetlog input set=socket hostname=db2 port=6767 terminate=wait output set=database
+jlogdup -v -e /tmp/tjgeterrs -l /tmp/tjgetlog input set=socket hostname=db3 port=6767 terminate=wait output set=database
 
 tail -f /dev/null
 
