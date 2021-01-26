@@ -10,7 +10,7 @@ COPY jbase_env.sh /opt/jbase/CurrentVersion/
 COPY jagent.sh /tmp/jagent.sh
 COPY telnet /tmp
 COPY ORDERS /tmp
-COPY CLUSTER /tmp
+COPY cluster /tmp
 
 RUN yum install -y xinetd telnet-server dos2unix
 RUN chmod +x /usr/bin/entrypoint.sh
